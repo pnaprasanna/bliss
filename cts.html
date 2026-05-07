@@ -125,7 +125,7 @@ body {
 <!-- Top Bar -->
 <div class="topbar">
   <input type="search" id="search" placeholder="Search links…">
-  <button id="themeToggle">🌙 Dark</button>
+  <button id="themeToggle">🌙</button>
 </div>
 
 <!-- Cards -->
@@ -148,14 +148,14 @@ const toggle = document.getElementById("themeToggle");
 
 if (localStorage.theme === "dark") {
   body.classList.add("dark");
-  toggle.textContent = "☀️ Light";
+  toggle.textContent = "☀️";
 }
 
 toggle.onclick = () => {
   body.classList.toggle("dark");
   const dark = body.classList.contains("dark");
   localStorage.theme = dark ? "dark" : "light";
-  toggle.textContent = dark ? "☀️ Light" : "🌙 Dark";
+  toggle.textContent = dark ? "☀️" : "🌙";
 };
 
 /* ================== Search ================== */
